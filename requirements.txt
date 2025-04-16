@@ -1,4 +1,4 @@
 # Dependencies
 
-streamlit    ==   1.33.0
-cryptograph  ==   42.0.5
+streamlit  
+cryptograph
