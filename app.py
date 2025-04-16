@@ -1,0 +1,2 @@
+# _____________________________WhispNote_________________________________
+# Encrypted notes that vanish like a whisper.
