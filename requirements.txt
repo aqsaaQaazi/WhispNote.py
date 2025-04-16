@@ -1,4 +1,2 @@
-# Dependencies
-
 streamlit  
-cryptograph
+cryptography
