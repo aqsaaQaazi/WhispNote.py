@@ -5,6 +5,21 @@ from utils.data_handler import load_data
 
 # home page & session state logic.
 
+import streamlit as st
+
+# --------------USES_states--------------------
+
+# ✅ Initialize all session keys here
+if "is_logged_in" not in st.session_state:
+    st.session_state.is_logged_in = False
+if "failed_attempts" not in st.session_state:
+    st.session_state.failed_attempts = 0
+if "lockout" not in st.session_state:
+    st.session_state.lockout = False
+if "lockout_time" not in st.session_state:
+    st.session_state.lockout_time = None
+
+
 
 # _____________________________WhispNote_________________________________
 # Encrypted notes that vanish like a whisper.
@@ -14,26 +29,12 @@ from utils.data_handler import load_data
 st.set_page_config(
     page_icon="🔐",
     page_title="WhispNote | Aqsaa Qaazi",
-    layout="wide"
+    layout="centered"
 )
 
 st.title("WhispNote")
 st.subheader("Encrypted notes that vanish like a whisper.")
 
-# --------------USES_states--------------------
-if 'data' not in st.session_state:
-    st.session_state['data'] = load_data()
-
-if 'failed_attempts' not in st.session_state:
-    st.session_state['failed_attempts'] = 0
-
-if 'lockout_time' not in st.session_state:
-    st.session_state['lockout_time'] = None
-
-if 'current_user' not in st.session_state:
-    st.session_state['current_user'] = None
-    
-    
 
 # ---------- lockoutLogic-----------------------
 
